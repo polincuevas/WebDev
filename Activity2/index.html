@@ -1,0 +1,575 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KATSEYE ♡ The Little Universe</title>
+    <meta name="description" content="A cute fan-made KATSEYE member website.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="container py-4 py-md-5">
+
+
+    <header class="hero text-center position-relative">
+        <span class="deco deco-one"><i class="bi bi-stars"></i></span>
+        <span class="deco deco-two"><i class="bi bi-heart-fill"></i></span>
+
+        <div class="hero-label mb-3">
+            <i class="bi bi-gem"></i>
+            A LITTLE FAN PAGE
+            <i class="bi bi-gem"></i>
+        </div>
+
+        <h1 class="hero-title">KATSEYE<span>♡</span></h1>
+
+        <p class="hero-subtitle">
+            Six girls, one universe, endless sparkle.
+        </p>
+
+        <p class="hero-description mx-auto">
+            Meet KATSEYE, the global girl group bringing together
+            different cultures, unique personalities, and a shared
+            love for music. Each member has her own special sparkle!
+        </p>
+
+        <div class="hero-tags d-flex flex-wrap justify-content-center gap-2 mt-4">
+            <span><i class="bi bi-stars"></i> Global girl group</span>
+            <span><i class="bi bi-heart"></i> Six unique charms</span>
+            <span><i class="bi bi-music-note-beamed"></i> Music & magic</span>
+        </div>
+
+        <a href="#members" class="btn meet-btn mt-4">
+            Meet the members <i class="bi bi-arrow-down-right ms-1"></i>
+        </a>
+
+         <a href="#music" class="btn discover-btn mt-4">
+        Discover songs
+        <i class="bi bi-music-note-beamed ms-1"></i>
+    </a>
+    </header>
+
+    <section id="members" class="members-section mt-5 pt-4">
+
+        <div class="section-heading text-center mb-4">
+            <span class="eyebrow">YOUR DAILY DOSE OF SPARKLE</span>
+            <h2>Meet the <span>EYEKONS' </span>girls</h2>
+            <p>Click a card to discover more about each member. ♡</p>
+        </div>
+
+        <div class="row g-4" id="members-container">
+            
+        </div>
+
+    </section>
+
+    <section id="music" class="music-section mt-5 pt-4">
+
+        <div class="section-heading text-center mb-4">
+            <span class="eyebrow">A LITTLE MUSIC CORNER</span>
+            <h2>Our Favorite <span>Sounds ♡</span></h2>
+            <p>Explore KATSEYE's songs and the eras behind them.</p>
+        </div>
+
+        <div id="era-filters"
+             class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+    
+        </div>
+
+        <div class="row g-4" id="songs-container">
+            
+        </div>
+
+        <p id="song-count" class="song-count text-center mt-4 mb-0"
+           aria-live="polite"></p>
+
+    </section>
+
+
+    <section class="fun-section mt-5">
+        <div class="fun-box text-center">
+            <span class="fun-icon">
+                <i class="bi bi-stars"></i>
+            </span>
+
+            <p class="eyebrow mt-3">A LITTLE SOMETHING TO KNOW</p>
+            <h2>Did you know? <span>♡</span></h2>
+
+            <p class="fun-description mx-auto">
+                KATSEYE was formed through The Debut: Dream Academy,
+                a global audition project created by HYBE and Geffen Records.
+                The group's six members come from different cultural
+                backgrounds, making them a truly international girl group.
+            </p>
+
+            <button class="btn fact-btn mt-2" id="fact-button" type="button">
+                <i class="bi bi-shuffle me-1"></i> Give me a fun fact!
+            </button>
+
+            <p id="random-fact" class="random-fact mt-3 mb-0" aria-live="polite">
+                Every member brings her own special sparkle. ✨
+            </p>
+        </div>
+    </section>
+
+    
+    <footer class="text-center py-5">
+        <div class="footer-stars">✧ ˚ · .</div>
+        <p class="footer-logo">KATSEYE <span>♡</span></p>
+        <p class="footer-text">Made with love for the EYEKONS.</p>
+
+        <p class="footer-note">
+            Fan-made website · Not affiliated with KATSEYE or its management.
+        </p>
+
+        <a href="https://www.katseye.world/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="official-link">
+            Visit the official website
+            <i class="bi bi-box-arrow-up-right"></i>
+        </a>
+    </footer>
+
+</main>
+
+<!-- JSON DATA -->
+<script id="katseye-data" type="application/json">
+{
+    "members": [
+        {
+            "name": "Sophia",
+            "fullName": "Sophia Laforteza",
+            "country": "Philippines",
+            "charm": "The Heart of KATSEYE",
+            "icon": "bi-heart-fill",
+            "color": "pink",
+            "image": "assets/img/sophia.png",
+            "description": "Our Filipino queen with a warm smile, powerful vocals, and a natural way of bringing everyone together.",
+            "fact": "Sophia loves watching Architectural Digest videos and listening to Disney movie soundtracks."
+        },
+        {
+            "name": "Manon",
+            "fullName": "Manon Bannerman",
+            "country": "Switzerland",
+            "charm": "The Effortless It Girl",
+            "icon": "bi-stars",
+            "color": "lavender",
+            "image": "assets/img/manon.png",
+            "description": "A dreamy beauty with effortless charm, a cool aura, and a presence that's hard to ignore.",
+            "fact": "Manon started writing songs when she was 15 years old."
+        },
+        {
+            "name": "Daniela",
+            "fullName": "Daniela Avanzini",
+            "country": "United States",
+            "charm": "The Dancing Queen",
+            "icon": "bi-lightning-charge-fill",
+            "color": "blue",
+            "image": "assets/img/daniela.png",
+            "description": "A fierce performer who brings bold energy, expressive moves, and confidence to the stage.",
+            "fact": "Daniela's mother taught her how to dance when she was young."
+        },
+        {
+            "name": "Lara",
+            "fullName": "Lara Raj",
+            "country": "United States",
+            "charm": "The Vocal Princess",
+            "icon": "bi-music-note-beamed",
+            "color": "purple",
+            "image": "assets/img/lara.png",
+            "description": "A confident music girl with a distinctive voice, bold style, and a personality that shines.",
+            "fact": "Lara is known for her distinctive vocals and love for music."
+        },
+        {
+            "name": "Megan",
+            "fullName": "Megan Skiendiel",
+            "country": "United States",
+            "charm": "The Cool Sunshine",
+            "icon": "bi-sun-fill",
+            "color": "peach",
+            "image": "assets/img/megan.png",
+            "description": "A playful and versatile performer who mixes cool-girl energy with a bright, lovable personality.",
+            "fact": "Megan started dancing at four and also enjoyed playing the ukulele."
+        },
+        {
+            "name": "Yoonchae",
+            "fullName": "Jeung Yoonchae",
+            "country": "South Korea",
+            "charm": "The Little Moon",
+            "icon": "bi-moon-stars-fill",
+            "color": "mint",
+            "image": "assets/img/yoonchae.png",
+            "description": "A sweet and talented performer whose bright smile and growing confidence make her shine.",
+            "fact": "Yoonchae enjoys listening to music and drawing what the songs inspire her to imagine."
+        }
+    ],
+"songs": [
+    {
+        "title": "Touch",
+        "era": "SIS (Soft Is Strong)",
+        "releaseDate": "July 26, 2024",
+        "image": "assets/img/touch.png",
+        "description": "A catchy pop song with a playful vibe and an unforgettable melody."
+    },
+    {
+        "title": "Flame",
+        "era": "Soundtrack",
+        "releaseDate": "November 14, 2024",
+        "image": "assets/img/flame.png",
+        "description": "KATSEYE's soundtrack release for Jentry Chau vs. the Underworld."
+    },
+    {
+        "title": "Gabriela",
+        "era": "Beautiful Chaos",
+        "releaseDate": "June 20, 2025",
+        "image": "assets/img/gabriela.png",
+        "description": "A dramatic pop track with a bold concept and captivating sound."
+    },
+    {
+        "title": "Internet Girl",
+        "era": "Standalone Singles",
+        "releaseDate": "January 2, 2026",
+        "image": "assets/img/internet-girl.png",
+        "description": "A playful single inspired by internet culture."
+    },
+    {
+        "title": "ICONIC BY MISTAKE",
+        "era": "Collaborations",
+        "releaseDate": "June 12, 2026",
+        "image": "assets/img/iconic-by-mistake.png",
+        "description": "A collaborative release featuring KATSEYE, LE SSERAFIM, and ILLIT."
+    },
+    {
+        "title": "Hootie Frutti",
+        "era": "WILD",
+        "releaseDate": "August 14, 2026",
+        "image": "assets/img/hootie-frutti.png",
+        "description": "A track from KATSEYE's WILD EP."
+    }
+]
+
+}
+</script>
+
+
+
+<!-- JAVASCRIPT -->
+<script>
+
+    const jsonText = document.getElementById("katseye-data").textContent;
+    const katseyeData = JSON.parse(jsonText);
+
+    function escapeHTML(value) {
+        return String(value).replace(/[&<>"']/g, function (char) {
+            const entities = {
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#39;"
+            };
+
+            return entities[char];
+        });
+    }
+
+    const membersContainer = document.getElementById("members-container");
+
+    function createMemberCard(member, index) {
+        const name = escapeHTML(member.name);
+        const fullName = escapeHTML(member.fullName);
+        const country = escapeHTML(member.country);
+        const charm = escapeHTML(member.charm);
+        const description = escapeHTML(member.description);
+        const image = escapeHTML(member.image);
+        const icon = escapeHTML(member.icon);
+        const color = escapeHTML(member.color);
+        const fact = escapeHTML(member.fact);
+
+        return `
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="member-flip ${color}"
+                     style="--card-index: ${index};"
+                     tabindex="0"
+                     role="button"
+                     aria-pressed="false"
+                     aria-label="View ${name}'s profile. Activate to flip the card.">
+
+                    <div class="member-flip-inner">
+
+                        <article class="card member-card member-front h-100">
+                            <div class="member-image-wrap">
+                                <img
+                                    src="${image}"
+                                    alt="${name} of KATSEYE"
+                                    class="member-image"
+                                    loading="lazy"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/600x750/f5e8f7/80558f?text=Member';">
+
+                                <span class="member-number">0${index + 1}</span>
+
+                                <span class="image-heart">
+                                    <i class="bi bi-heart-fill"></i>
+                                </span>
+                            </div>
+
+                            <div class="card-body">
+                                <div class="member-charm">
+                                    <i class="bi ${icon}"></i>
+                                    ${charm}
+                                </div>
+
+                                <h3 class="member-name">${fullName}</h3>
+                                <p class="member-stage-name">${name} · KATSEYE</p>
+
+                                <div class="flip-hint">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                    Click to discover more
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card member-card member-back h-100">
+                            <div class="back-decoration back-decoration-one">
+                                <i class="bi bi-stars"></i>
+                            </div>
+
+                            <div class="back-decoration back-decoration-two">
+                                <i class="bi bi-heart-fill"></i>
+                            </div>
+
+                            <div class="card-body">
+                                <span class="back-label">
+                                    <i class="bi bi-gem"></i>
+                                    GET TO KNOW HER
+                                </span>
+
+                                <div class="back-member-icon">
+                                    <i class="bi ${icon}"></i>
+                                </div>
+
+                                <h3 class="back-member-name">${name}</h3>
+                                <p class="back-real-name">${fullName}</p>
+
+                                <div class="back-divider"></div>
+
+                                <div class="info-heading">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    Country
+                                </div>
+                                <p class="back-info">${country}</p>
+
+                                <div class="info-heading">
+                                    <i class="bi bi-stars"></i>
+                                    Her vibe
+                                </div>
+                                <p class="back-info">${charm}</p>
+
+                                <div class="info-heading">
+                                    <i class="bi bi-person-heart"></i>
+                                    About her
+                                </div>
+                                <p class="back-description">${description}</p>
+
+                                <div class="back-fact">
+                                    <i class="bi bi-lightbulb-fill"></i>
+                                    <strong>Fun fact</strong>
+                                    <p>${fact}</p>
+                                </div>
+
+                                <button type="button" class="btn flip-back-btn">
+                                    <i class="bi bi-arrow-left me-1"></i>
+                                    Flip back
+                                </button>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    if (membersContainer) {
+        membersContainer.innerHTML = katseyeData.members
+            .map(createMemberCard)
+            .join("");
+
+        function toggleCard(card) {
+            const isFlipped = card.classList.contains("is-flipped");
+
+            card.classList.toggle("is-flipped", !isFlipped);
+            card.setAttribute("aria-pressed", String(!isFlipped));
+        }
+
+        membersContainer.addEventListener("click", function (event) {
+            const card = event.target.closest(".member-flip");
+
+            if (!card) return;
+
+            if (event.target.closest(".flip-back-btn")) {
+                if (card.classList.contains("is-flipped")) {
+                    toggleCard(card);
+                }
+                return;
+            }
+
+            toggleCard(card);
+        });
+
+        
+        membersContainer.addEventListener("keydown", function (event) {
+            const card = event.target.closest(".member-flip");
+
+            if (!card || event.target !== card) return;
+
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                toggleCard(card);
+            }
+        });
+    }
+
+    const randomFact = document.getElementById("random-fact");
+    const factButton = document.getElementById("fact-button");
+
+    if (randomFact && factButton) {
+        factButton.addEventListener("click", function () {
+            const facts = katseyeData.members.map(function (member) {
+                return member.name + ": " + member.fact;
+            });
+
+            let nextFact;
+
+            do {
+                nextFact = facts[
+                    Math.floor(Math.random() * facts.length)
+                ];
+            } while (
+                facts.length > 1 &&
+                nextFact === randomFact.textContent
+            );
+
+            randomFact.textContent = nextFact;
+            randomFact.classList.remove("fact-pop");
+
+            void randomFact.offsetWidth;
+            randomFact.classList.add("fact-pop");
+        });
+    }
+
+
+    const songs = katseyeData.songs || [];
+
+    const songsContainer = document.getElementById("songs-container");
+    const eraFilters = document.getElementById("era-filters");
+    const songCount = document.getElementById("song-count");
+
+    let selectedEra = "All Songs";
+
+    function renderEraFilters() {
+        const eras = [
+            "All Songs",
+            ...new Set(songs.map(function (song) {
+                return song.era;
+            }))
+        ];
+
+        eraFilters.innerHTML = eras.map(function (era) {
+            const active = era === selectedEra;
+
+            return `
+                <button
+                    type="button"
+                    class="btn era-btn ${active ? "active" : ""}"
+                    data-era="${escapeHTML(era)}"
+                    aria-pressed="${active}">
+                    ${escapeHTML(era)}
+                </button>
+            `;
+        }).join("");
+    }
+
+    function renderSongs() {
+        const filteredSongs = selectedEra === "All Songs"
+            ? songs
+            : songs.filter(function (song) {
+                return song.era === selectedEra;
+            });
+
+        songsContainer.innerHTML = filteredSongs.map(function (song) {
+            return `
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="song-card h-100">
+
+                        <div class="song-image-wrap">
+                            <img
+                                src="${escapeHTML(song.image)}"
+                                alt="${escapeHTML(song.title)} artwork"
+                                class="song-image"
+                                loading="lazy"
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x600/fff0f6/ad4f7d?text=KATSEYE';">
+
+                            <span class="song-era-tag">
+                                ${escapeHTML(song.era)}
+                            </span>
+                        </div>
+
+                        <div class="song-details">
+                            <p class="song-date">
+                                <i class="bi bi-calendar-heart me-1"></i>
+                                ${escapeHTML(song.releaseDate)}
+                            </p>
+
+                            <h3 class="song-title">
+                                ${escapeHTML(song.title)}
+                            </h3>
+
+                            <p class="song-description">
+                                ${escapeHTML(song.description)}
+                            </p>
+                        </div>
+
+                    </article>
+                </div>
+            `;
+        }).join("");
+
+        songCount.textContent =
+            `${filteredSongs.length} ${filteredSongs.length === 1 ? "song" : "songs"} to love ♡`;
+    }
+
+    if (songsContainer && eraFilters && songCount) {
+        eraFilters.addEventListener("click", function (event) {
+            const button = event.target.closest("[data-era]");
+
+            if (!button) return;
+
+            selectedEra = button.dataset.era;
+
+            renderEraFilters();
+            renderSongs();
+        });
+
+        renderEraFilters();
+        renderSongs();
+    }
+</script>
+
+
+</body>
+</html>
