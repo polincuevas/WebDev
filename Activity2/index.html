@@ -23,6 +23,37 @@
 
 <main class="container py-4 py-md-5">
 
+    
+
+<header class="site-header">
+    <a href="#" class="site-brand" aria-label="KATSEYE home">
+        <span class="site-wordmark">KATSEYE</span>
+        <span class="brand-caption">THE LITTLE UNIVERSE</span>
+    </a>
+
+    <button
+        class="site-menu-toggle"
+        id="site-menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="site-navigation"
+        aria-expanded="false"
+    >
+        <i class="bi bi-list" id="site-menu-icon"></i>
+    </button>
+
+    <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
+        <a href="#members" class="site-nav-link">Members</a>
+
+        <a href="#music" class="site-nav-link">Music</a>
+
+        <a href="#fun-facts" class="site-nav-link">Fun Facts</a>
+
+        </a>
+    </nav>
+</header>
+
+
 
     <header class="hero text-center position-relative">
         <span class="deco deco-one"><i class="bi bi-stars"></i></span>
@@ -99,7 +130,7 @@
     </section>
 
 
-    <section class="fun-section mt-5">
+   <section id="fun-facts" class="fun-section mt-5">
         <div class="fun-box text-center">
             <span class="fun-icon">
                 <i class="bi bi-stars"></i>
@@ -120,7 +151,7 @@
             </button>
 
             <p id="random-fact" class="random-fact mt-3 mb-0" aria-live="polite">
-                Every member brings her own special sparkle. ✨
+                Every member brings her own special sparkle. 
             </p>
         </div>
     </section>
@@ -568,6 +599,53 @@
         renderEraFilters();
         renderSongs();
     }
+    
+
+    const menuToggle = document.getElementById("site-menu-toggle");
+    const siteHeader = document.querySelector(".site-header");
+    const menuIcon = document.getElementById("site-menu-icon");
+    const menuLinks = document.querySelectorAll(
+        "#site-navigation .site-nav-link"
+    );
+
+    function closeMenu() {
+        siteHeader.classList.remove("menu-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuIcon.className = "bi bi-list";
+    }
+
+    menuToggle.addEventListener("click", function () {
+        const isOpen = siteHeader.classList.toggle("menu-open");
+
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+
+        menuIcon.className = isOpen ? "bi bi-x-lg" : "bi bi-list";
+    });
+
+    menuLinks.forEach(function (link) {
+        link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            closeMenu();
+        }
+    });
+
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 991.98) {
+            closeMenu();
+        }
+    });
+</script>
+
+
+    
 </script>
 
 
